@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\PC\source\repos\Project\App.xaml
-2376403462
+3-1767379119
 
-18-1513551523
+222041939447
 1991470581639
-MainWindow.xaml;View\LoginView.xaml;
+MainWindow.xaml;View\Dashboard.xaml;View\LoginView.xaml;
 
 False
 
