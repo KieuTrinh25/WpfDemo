@@ -4,14 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project.View"
+        xmlns:vm="clr-namespace:Project.ViewModel"
         mc:Ignorable="d"
-        Title="LoginView" Height="450" Width="800"
+        Title="LoginView" Height="450" Width="600"
         WindowStyle="None"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Background="Transparent"
         AllowsTransparency="True"
         MouseDown="Window_MouseDown">
+    <Window.DataContext>
+        <vm:LoginViewModel/>
+    </Window.DataContext>
     <Border CornerRadius="10">
         
         <Border CornerRadius="10"
@@ -83,7 +87,7 @@
                             FontSize="12"
                             FontFamily="Montserrat"
                             Cursor="Hand"
-                            Grid.Column="2" Click="btnClose_Click_1">
+                            Grid.Column="2">
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="Background" Value="#bf3b42"/>
@@ -130,21 +134,7 @@
                                TextWrapping="Wrap"
                                Margin="0,35,0,0"/>
                     <TextBox x:Name="txtPhone"
-                             Text="{Binding Phone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                             FontSize="13"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"  
-                             Foreground="Black"
-                             CaretBrush="LightGray"
-                             BorderBrush="DarkGray"
-                             BorderThickness="0,0,0,1"
-                             Height="28"
-                             VerticalContentAlignment="Center"
-                             Margin="0,5,0,0"
-                             Padding="20,0,0,0" TextChanged="txtPhone_TextChanged">
-                    </TextBox>
-                    <TextBox x:Name="txtResult"
-                             Text="{Binding Phone}"
+                             Text="{Binding Phone, UpdateSourceTrigger=PropertyChanged}"
                              FontSize="13"
                              FontWeight="Medium"
                              FontFamily="Montserrat"  
@@ -164,11 +154,12 @@
                                FontWeight="Medium"
                                FontFamily="Montserrat"
                                Margin="0,15,0,0"/>
-                    <PasswordBox x:Name="txtPass"
+                    <TextBox x:Name="txtPass"
+                             Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}"
                              FontSize="13"
                              FontWeight="Medium"
                              FontFamily="Montserrat"
-                             Foreground="White"
+                             Foreground="Black"
                              CaretBrush="LightGray"
                              BorderBrush="DarkGray"
                              BorderThickness="0,0,0,1"
@@ -176,9 +167,26 @@
                              VerticalContentAlignment="Center"
                              Margin="0,5,0,0"
                              Padding="20,0,0,0">
-                    </PasswordBox>
-
+                    </TextBox>
+                    <TextBlock Text="Login Failed"                               
+                               Foreground="Red"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               Margin="0,15,0,0">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Hidden"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsErrorVisible}" Value="True">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>  
+                    </TextBlock>
                     <Button x:Name="btnLogin"
+                            Command="{Binding LoginCommand}"
                             BorderThickness="0"
                             Content="LOG IN"
                             Foreground="Beige"
@@ -186,7 +194,7 @@
                             FontFamily="Montserrat"
                             Cursor="Hand"
                             Grid.Column="2"
-                            Margin="0,50,0,0" Click="btnLogin_Click">
+                            Margin="0,50,0,0">
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Setter Property="Background" Value="#003366"/>
