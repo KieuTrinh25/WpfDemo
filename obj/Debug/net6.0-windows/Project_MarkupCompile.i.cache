@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\PC\source\repos\Project\App.xaml
-3-1767379119
+9-1940098707
 
-24-416509362
-1991470581639
-MainWindow.xaml;View\Dashboard.xaml;View\LoginView.xaml;
+33394103390
+209-1651022196
+MainWindow.xaml;Styles\ButtonStyles.xaml;Styles\UIColors.xaml;View\Client.xaml;View\Dashboard.xaml;View\HomeView.xaml;View\LoginView.xaml;View\MainView.xaml;View\UserView.xaml;
 
 True
 
