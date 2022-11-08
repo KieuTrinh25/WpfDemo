@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "N6+NapmUM7VD1VdrubA0LGF8kZDNMfQdBdwTUeAxvLgmBhNcOfTjXCUYYKq4JcFGlscEYPA1KYpBvVDFyWYJ1g==",
+  "dgSpecHash": "HeZ2Z3Dzt8bcKQnZUIZ7mBzEzhLBmwJhbuyiazm+yr3byRR8f2SLN20Qw6BEKO84RXMXjLEHfPQe8553w6qELA==",
   "success": true,
   "projectFilePath": "C:\\Users\\PC\\source\\repos\\Project\\Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\castle.core\\4.3.1\\castle.core.4.3.1.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\fontawesome.sharp\\5.15.1\\fontawesome.sharp.5.15.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\fontawesome.wpf\\4.7.0.9\\fontawesome.wpf.4.7.0.9.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",

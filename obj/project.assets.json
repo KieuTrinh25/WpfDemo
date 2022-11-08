@@ -27,6 +27,18 @@
           }
         }
       },
+      "FontAwesome.Sharp/5.15.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/FontAwesome.Sharp.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/FontAwesome.Sharp.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App"
+        ]
+      },
       "FontAwesome.WPF/4.7.0.9": {
         "type": "package",
         "compile": {
@@ -1784,6 +1796,22 @@
         "lib/netstandard1.5/Castle.Core.dll",
         "lib/netstandard1.5/Castle.Core.xml",
         "readme.txt"
+      ]
+    },
+    "FontAwesome.Sharp/5.15.1": {
+      "sha512": "XXbbYLz9tcx8Oe/4gHSeRwSDX100cdU0CA585rr1z2nNl2Jcj/K9StU6gbdNRkr8IhWdhc6SsX5FJ91PQa3qxw==",
+      "type": "package",
+      "path": "fontawesome.sharp/5.15.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fontawesome.sharp.5.15.1.nupkg.sha512",
+        "fontawesome.sharp.nuspec",
+        "lib/net40/FontAwesome.Sharp.dll",
+        "lib/net45/FontAwesome.Sharp.dll",
+        "lib/net472/FontAwesome.Sharp.dll",
+        "lib/net48/FontAwesome.Sharp.dll",
+        "lib/netcoreapp3.1/FontAwesome.Sharp.dll"
       ]
     },
     "FontAwesome.WPF/4.7.0.9": {
@@ -5988,6 +6016,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "FontAwesome.Sharp >= 5.15.1",
       "FontAwesome.WPF >= 4.7.0.9",
       "Mindbox.Data.Linq >= 5.0.0"
     ]
@@ -6031,6 +6060,10 @@
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
         "dependencies": {
+          "FontAwesome.Sharp": {
+            "target": "Package",
+            "version": "[5.15.1, )"
+          },
           "FontAwesome.WPF": {
             "target": "Package",
             "version": "[4.7.0.9, )"
